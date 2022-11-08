@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="../logoPuppyLove.png" alt="logo" height="45px" class="logo">
+            <nav class="site-nav">
+                <ul class="links">
+                    <li><a href="/">My Profile</a></li>
+                    <li><a href="/pets">My Pets</a></li>
+                    <li><a href="/friends">Furever Friends</a></li>
+                    <li><a href="/possible">Pawsible Friends</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="showContainer">
+            <h1><%= possible.name %> </h1>
+            <section class="tools">
+                <form  action='/possible/<%= possible._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
+                    <input id="x" type="submit" value="X">
+                </form>
+            </section>
+            <img class="doggo" id="showDog" src="<%= possible.img %>" alt="my good boi" height="400px"/> <br/>
+            <ul class="data-display">
+            <li>Breed: <%= possible.breed %> </li><br/>
+            <li>Age: <%= possible.age %> </li><br/>
+            <li>Energy: <%= possible.energy %> /5</li><br/>
+            <li>Personality: <%= possible.personality %> </li><br/>
+            <li>Doggo Bio: <%= possible.about %> </li><br/>
+            <li>Favorite Play Places: <%= possible.locations %> </li><br/>
+        </ul>
+        </section>
+    </main>
+</body>
+</html>

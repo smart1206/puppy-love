@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <img src="../logoPuppyLove.png" alt="logo" height="45px" class="logo">
+        <nav class="site-nav">
+            <ul>
+                <li>
+                    <a href="/">My Profile</a>
+                </li>
+                <li>
+                    <a href="/pets">Pets</a>
+                </li>
+                <li>
+                    <a href="/friends">Furever Friends</a>
+                </li>
+                <li>
+                    <a href="/possible">Pawsible Friends</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="showContainer">
+            <h1><%= pets.name %> </h1>
+            <div id="showDog" >
+                <img class="doggo" src="<%= pets.img %>" alt="my good boi" height="400px"/>
+            </div>
+            <section class="tools-show">
+                <a href="/pets/<%= pets._id %>/edit">Edit</a>
+                <form  action="/pets/<%= pets._id %>?_method=DELETE" method="POST">
+                    <input id="shwDltInp" type="submit" value="Delete Pet" />
+                </form>
+            </section>
+            <ul class="data-display">
+                <li>Breed: <%= pets.breed %> </li><br/>
+                <li>Age: <%= pets.age %> </li><br/>
+                <li>Energy: <%= pets.energy %> /5</li><br/>
+                <li>Personality: <%= pets.personality %> </li><br/>
+                <li>Doggo Bio: <%= pets.about %> </li><br/>
+                <li>Favorite Play Places: <%= pets.locations %> </li><br/>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+    <title>My Pet Index</title>
+</head>
+<body>
+    <header>
+        <img src="../logoPuppyLove.png" alt="logo" height="45px" class="logo">
+        <nav class="site-nav">
+            <ul>
+                <li>
+                    <a href="/">My Profile</a>
+                </li>
+                <li>
+                    <a href="/pets">Pets</a>
+                </li>
+                <li>
+                    <a href="/friends">Furever Friends</a>
+                </li>
+                <li>
+                    <a href="/possible">Pawsible Friends</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="index-container"></div>
+        <h1>My Pets</h1>
+        <a href="/pets/new"><button id="btnNew" >Add Pet</button></a> <br/>
+        <ul class="pet-display">
+            <% for(let i=0; i < pets.length; i++){ %>
+                <li>
+                    <a href="/pets/<%= pets[i]._id %>"><%= pets[i].name %></a> <br/>
+                    <img class="doggo" id="my-doggo" src="<%= pets[i].img %>" height="200px"/>
+                </li> 
+           <% } %> 
+        </ul>
+    </main>
+
+</body>
+</html>

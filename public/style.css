@@ -1,0 +1,350 @@
+/* VARIABLES */
+html {
+    width: 100%;
+}
+
+/* GENERAL  */
+body {
+    width: 100%;
+    margin: 0;
+    background: rgb(240, 244, 245);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+/* Site-Nav Bar */
+.container {
+    width: 97%;
+    max-width: 1000px;
+    margin: 0;
+    
+}
+
+header {
+    background:  #128f95;
+    color:aliceblue;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+x
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    margin-left: 15px;
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    max-width: 800px;
+    min-width: 350px;
+    list-style: none;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    overflow: scroll;
+}
+
+.site-nav li {
+    display: inline-block;
+    margin-left: 8px;
+    padding-top: 25px;
+}
+
+.site-nav a {
+    color:aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.site-nav a:hover {
+    color: rgb(246, 246, 136);
+}
+/* Side Nav Bar */
+/* Dog Images */
+.doggo {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 25%;
+    border: 3px solid white;
+    align-items: center;
+    /* box-shadow: 1px 1px 10px white,
+              -1px -1px 10px white,
+              1px -1px 10px white,
+              -1px 1px 10px white; */
+}
+#showDog {
+    width: 300px;
+    height: 300px;
+    border-radius: 30%;
+
+}
+#my-doggo {
+    border-radius: 50%;
+}
+/* Text Things */
+h1 {
+    color:#0e5d61; 
+}
+/* Buttons */
+.tools {
+    display: flex;
+    justify-content: space-between;
+}
+#x {
+    font-size: 25px;
+    background: none;
+    color: red;
+    border: 3px solid red;
+    border-radius: 50%;
+    margin: 1px 1px;
+    float: left;
+    text-decoration: none;
+    display: inline-block;
+}
+#heart {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+#find-friend {
+    margin:16px;
+    background: none;
+    border: 3px solid white;
+    font-family: sans-serif;
+    border-radius: 5px;
+    color:#1a6569;
+    padding: 2px;
+    font-size: 16px;
+    font-weight: 300;
+}
+#find-friend:hover {
+    text-shadow:2px 2px #e8e88a;
+}
+/* .index-container */
+.index-container {
+    position: relative;
+    /* overflow: scroll; */
+}
+#btnNew {
+    margin:16px;
+    background: none;
+    border: 3px solid white;
+    font-family: sans-serif;
+    border-radius: 5px;
+    color:#1a6569;
+    padding: 2px;
+    font-size: 16px;
+    font-weight: 300;
+}
+#btnNew:hover {
+    text-shadow:2px 2px #e8e88a;
+}
+#find-friend {
+    display: inline;
+}
+/* Pet Container */
+.pet-display {
+    background:white;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0 5%;
+}
+.pet-display ul {
+    list-style: none;
+}
+.pet-display li {
+    background: #c5dddf;
+    box-shadow: 1px rgb(147, 143, 143);
+    border:2px solid rgb(218, 218, 218);
+    border-radius: 5%;
+    /* width: 300px;
+    height: 305px; */
+    margin: 16px;
+    padding: 16px;
+}
+.pet-display a {
+    color:#0e5d61;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+.pet-display a:hover {
+    text-shadow:2px 2px #e8e88a;
+}
+/* show container */
+.showContainer {
+    width: 90vw;
+    margin: 50px auto;
+    /* display: flex; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+
+}
+.showContainer h1 {
+    display: flex;
+    justify-content: center;
+}
+.showContainer #showDog {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.showContainer #showDog img {
+    align-items: center;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+/* tools-show */
+.tools-show {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 35%;
+    margin-right: 35%;
+    font-family: sans-serif;
+}
+.tools-show a {
+    text-decoration: none;
+    color:#1a6569;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 2px;
+}
+.tools-show a:hover {
+    text-shadow:2px 2px #e8e88a;
+}
+#shwDltInp {
+    background: none;
+    border: 3px solid white;
+    font-family: sans-serif;
+    border-radius: 5px;
+    color:#1a6569;
+    padding: 2px;
+    font-size: 16px;
+    font-weight: 300;
+}
+#shwDltInp:hover {
+    border: 3px dashed red;
+    color: red;
+}
+#delete-friend {
+    display: flex;
+    justify-content: center;
+}
+#delete-friend input {
+    background: none;
+    border: 3px solid white;
+    font-family: sans-serif;
+    border-radius: 5px;
+    color: red;
+    padding: 2px;
+    font-size: 16px;
+    font-weight: 300;
+}
+#delete-friend input:hover {
+    border: 3px dashed red;
+}
+/* showdata display */
+.data-display {
+    list-style: none;
+}
+
+
+/* form */
+.main-form {
+}
+.form-container {
+    height: 500px;
+    overflow: scroll;
+    background: #b7e3e4;
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+.form-title {
+    background: aliceblue;
+    width: 20vw;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: sticky;
+}
+.scroll {
+    overflow:scroll;
+    width: 40vw;
+    margin-left: 10vw;
+    
+}
+fieldset {
+    border: 1px solid white;
+    padding: 20px;
+    margin: 20px 0;
+}
+legend {
+    padding: 0px 10px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: white;
+    text-shadow: .5px .5px #1a6569;
+    font-weight: 500;
+}
+label {
+    font-family: sans-serif;
+    font-weight: 200;
+    color:#1a6569;
+}
+#input-form,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #1a6569;
+    border-radius: 5px;
+    resize: none;
+}
+#input-form:focus{
+    outline:0;
+    border: 1px solid #ff5b79;
+}
+#input-form[type="submit"]{
+    width: 50%;
+    margin-left: 25%;
+    background: #2a8f90;
+    box-shadow: 2px 2px white;
+    font-family: 'Oswald';
+    color: whitesmoke;
+    border: 0px;
+    transition: 0.2s ease-in-out;
+}
+#input-form[type="submit"]:hover {
+    cursor: pointer;
+    color:#2a8f90;
+    background: aliceblue;
+    box-shadow: 2px 2px #e8e88a;
+  }
+#slider {
+    display: flex;
+    justify-content: space-between;
+}

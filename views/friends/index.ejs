@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="../logoPuppyLove.png" alt="logo" height="45px" class="logo">
+            <nav class="site-nav">
+                <ul class="links">
+                    <li><a href="/">My Profile</a></li>
+                    <li><a href="/pets">My Pets</a></li>
+                    <li><a href="/friends">Furever Friends</a></li>
+                    <li><a href="/possible">Pawsible Friends</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="index-container">
+            <div class="top-display">
+                <h1>Fuzzy Friends</h1>
+                <a href="/possible"><button id="find-friend">Find More Friends</button></a>
+            </div>
+            <ul class="pet-display">
+                <% for(let i=0; i < friends.length; i++){ %>
+                    <li>
+                        <a href="/friends/<%= friends[i]._id %>"><%= friends[i].name %></a> <br/>
+                        <img  class="doggo" src="<%= friends[i].img %>" height="200px"/>
+                        <section class="tools">
+                            <form action="/friends/<%= friends[i]._id %>?_method=DELETE" method="POST">
+                                <input id="x" type="submit" value="X" />
+                            </form>
+                        </section>
+                </li>
+                <% } %> 
+            </ul>
+        </div>
+        
+    </main>
+</body>
+</html>

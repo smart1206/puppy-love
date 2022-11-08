@@ -1,0 +1,96 @@
+<form action="/pets" method="POST">
+    <h1>Add New Pet</h1>
+    <section class="baseline">
+        Photo:<input type="text" name="img"/><br />
+        Name:<input type="text" name="name" /><br/>
+        Breed:<input type="text" name="breed" /><br/>
+        Age:<input type="number" name="age" /><br/>
+    </section>
+    <hr>
+    <!-- <section class="stats">
+        Socialized:<input type="radio" name="socialized" id="yes" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="socialized" id="no" value="no">
+        <label for="no">No</label><br/>
+        If no explain...<textarea name="explOne"></textarea><br/>
+        Vaccinated:<input type="radio" name="vaccine" id="yes" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="vaccine" id="no" value="no">
+        <label for="no">No</label><br/>
+        If no explain...<textarea name="explTwo"></textarea><br/>
+    </section>
+    <hr> -->
+    <section class="disposition">
+        <label for="energy">Energy Level</label><br/>
+        <span>Low</span>
+        <input type="range" name="energy" id="energy" value="3" min="1" max="5"/>
+        <span>High</span>
+        <br/>
+        Personality: <br />
+        <textarea name="personality"></textarea><br/>
+        <!-- <label for="friendly">friendly</label>
+        <input id="friendly" value="friendly" name="personality" type="checkbox"/>
+        <label for="playful">playful</label>
+        <input id="playful" value="friendly" name="personality" type="checkbox"/>
+        <label for="protective">protective</label>
+        <input id="protective" value="protective" name="personality" type="checkbox"/>
+        <label for="curious">curious</label>
+        <input id="curious" value="curious" name="personality" type="checkbox"/>
+        <label for="timid">timid</label>
+        <input id="timid" value="timid" name="personality" type="checkbox"/>
+        <label for="reserved">reserved</label>
+        <input id="reserved" value="reserved" name="personality" type="checkbox"/>
+        <label for="well-mannered">well-mannered</label>
+        <input id="well-mannered" value="well-mannered" name="personality" type="checkbox"/>
+        <label for="other">other</label>
+        <input id="other" value="other" name="personality" type="checkbox"/>
+        <br /> -->
+
+        Doggo Bio:<br/>
+        <textarea name="about" ></textarea><br/>
+    </section>
+    <hr>
+    <section class="locations">
+        Favorite Play Places <br/>
+        <textarea name="locations"></textarea>
+        <!-- <label for="dog park">dog park</label>
+        <input id="dog park" value="dog park" name="locations" type="checkbox"/>
+        <label for="hiking trails">hiking trails</label>
+        <input id="hiking trails" value="hiking trails" name="locations" type="checkbox"/>
+        <label for="local park">local park</label>
+        <input id="local park" value="local park" name="locations" type="checkbox"/>
+        <label for="greenway">greenway</label>
+        <input id="greenway" value="greenway" name="locations" type="checkbox"/>
+        <label for="other">other</label>
+        <input id="other" value="other" name="locations" type="checkbox"/> -->
+    </section>
+    <input type="submit" value="Add Pet"/><br/>
+</form>
+
+<form action="/pets" method="POST">
+    <h1>Add New Pet</h1>
+    <section class="baseline">
+        Photo:<input type="text" name="img"/><br />
+        Name:<input type="text" name="name" /><br/>
+        Breed:<input type="text" name="breed" /><br/>
+        Age:<input type="number" name="age" /><br/>
+    </section>
+    <hr>
+    <section class="disposition">
+        <label for="energy">Energy Level</label><br/>
+        <span>Low</span>
+        <input type="range" name="energy" id="energy" value="3" min="1" max="5"/>
+        <span>High</span>
+        <br/>
+        Personality: <br />
+        <textarea name="personality"></textarea><br/>
+        Doggo Bio:<br/>
+        <textarea name="about" ></textarea><br/>
+    </section>
+    <hr>
+    <section class="locations">
+        Favorite Play Places <br/>
+        <textarea name="locations"></textarea>
+    </section>
+    <input type="submit" value="Add Pet"/><br/>
+</form>

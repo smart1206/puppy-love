@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+    <title>Possible Friends</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="../logoPuppyLove.png" alt="logo" height="45px" class="logo">
+            <nav class="site-nav">
+                <ul class="links">
+                    <li><a href="/">My Profile</a></li>
+                    <li><a href="/pets">My Pets</a></li>
+                    <li><a href="/friends">Furever Friends</a></li>
+                    <li><a href="/possible">Pawsible Friends</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="index-container">
+            <h1>Pawsible Friends</h1>
+            <ul class="pet-display">
+                <% for(let i=0; i < possible.length; i++){ %>
+                    <li>
+                        <a href="/possible/<%= possible[i]._id %>"><%= possible[i].name %></a> <br/>
+                        <img class="doggo" src="<%= possible[i].img %>" height="200px"/>
+                        <section class="tools">
+                            <form action='/possible/<%= possible[i]._id %>?_method=DELETE' method="POST" style="display:inline; margin-left:16px;">
+                                <input id="x" type="submit" value="X">
+                            </form>
+                            <form  action="/possible/<%= possible[i]._id %>/heart" method="POST" style="display:inline; margin-left:16px;">
+                                <button id="heart"><img src="https://www.freeiconspng.com/uploads/facebook-blank-heart-png-9.png"  height="40px" alt="heart button"></button>
+                            </form>
+                        </section>
+                    </li>
+               <% } %> 
+            </ul></div>
+        
+    </main>
+</body>
+</html>

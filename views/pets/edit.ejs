@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    <title>Edit Pet</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="../logoPuppyLove.png" alt="logo" height="45px" class="logo">
+            <nav class="site-nav">
+                <ul class="links">
+                    <li><a href="/">My Profile</a></li>
+                    <li><a href="/pets">My Pets</a></li>
+                    <li><a href="/friends">Furever Friends</a></li>
+                    <li><a href="/possible">Pawsible Friends</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <div class="form-title">
+               <h1>Edit Pet</h1> 
+            </div>
+            <form class="scroll" action="/pets/<%= pet._id %>?_method=PUT" method="POST">
+            <fieldset class="baseline">
+                <legend>BASIC PET INFORMATION</legend>
+                <label for="img">Photo:</label>
+                <input id="input-form" type="text" name="img" value="<%= pet.img%>"/><br />
+                <label for="name">Name:</label>  
+                <input id="input-form" type="text" name="name" value="<%= pet.name%>"/><br/>
+                <label for="breed">Breed:</label>  
+                <input id="input-form" type="text" name="breed" value="<%= pet.breed%>"/><br/> 
+                <label for="age">Age:</label> 
+                <input id="input-form" type="number" name="age" value="<%= pet.age%>"/>
+            </fieldset>
+            <hr>
+            <fieldset class="disposition">
+                <legend>DOGGO VIBES</legend>
+                <label for="energy" value="<%= pet.energy %> ">Energy Level</label><br/>
+                <div id="slider">
+                    <span>Low</span>
+                    <span>High</span>
+                </div>
+                <input id="input-form" type="range" name="energy" id="energy" value="3" min="1" max="5"/>
+                <br/>
+                <label for="personality">Personality: </label><br />
+                <textarea name="personality" ><%= pet.personality%></textarea><br/>
+                <label for="about"> Doggo Bio:</label><br/>
+                <textarea name="about"><%= pet.about%></textarea><br/>
+            </fieldset>
+            <hr>
+            <fieldset class="locations">
+                <legend>PLAY ZONES</legend>
+                <label for="locations">Favorite Places </label><br/>
+                <textarea name="locations"><%= pet.locations%></textarea>
+            </fieldset>
+            <input id="input-form" type="submit" value="Update Pet"/><br/>
+        </form>
+        </div>
+        
+    </main>
+</body>
+</html>
